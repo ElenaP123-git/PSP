@@ -8,7 +8,7 @@ public class Ej1 {
 
 	    public static void main(String[] args) {
 	        
-	        String rutaChrome = "C:\\Program Files\\Google\\Chrome";
+	        String rutaChrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 	        String url = "https://www.google.com";
 
 	        
@@ -23,6 +23,25 @@ public class Ej1 {
 	        } catch (IOException e) {
 	            logger.error(e.getMessage()); 
 	        }
+	        logger.info("Fin");
+	        
+	        /*
+	          Otra manera de hacerlo
+	          
+	         Runtime rt = Runtime.getRuntime(); 
+	         String[] comandoRuntime = { "C://...Chrome.exe", "C://Ipasen..."}; 
+	         
+	         try{
+	         Process proceso = rt.exec(rutaChromeYPasen);
+	         int codigoRet = proceso.waitfor();
+	         }
+	        	catch (IOException e){
+	        	e.printStackTrace();
+	        	} catch (InterruptedException e){
+	        	logger.error(e.getMessage());
+	        	}
+	         
+	         */
 
 	        // CON PROCESSBUILDER (indica cómo se va a ejecutar el proceso antes de crearlo - PROCESS controla el proceso una vez lanzado)
 	        
@@ -38,4 +57,4 @@ public class Ej1 {
 	        }
 	    }
 	}
-
+	    

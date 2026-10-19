@@ -11,7 +11,7 @@ public class ProcesoRntm {
 	    Runtime rt = Runtime.getRuntime(); 
 	    
 	    // "notepad, crea el fichero mifichero.txt"
-	    String[] informacionProceso = {"notepad.exe", "miFichero.txt"}; //[cite: 56, 73]
+	    String[] informacionProceso = {"notepad.exe", "miFichero.txt"}; 
 	    
 	    // Process: representará al proceso en ejecución
 	    Process proceso; 

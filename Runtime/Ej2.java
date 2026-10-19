@@ -15,7 +15,7 @@ public class Ej2 {
         ProcessBuilder pb = new ProcessBuilder("tasklist"); 
         
         // inheritIO(): redirige automáticamente la salida del hijo a la consola del padre
-        pb.inheritIO(); 
+        pb.inheritIO(); //con esto se ahorra el .getInputStream()
         
         try {
             // .start(): empieza proceso
@@ -36,10 +36,10 @@ public class Ej2 {
             // .exec(): ejecuta tasklist
             Process pRuntime = rt.exec("tasklist"); 
             
-            // InputStream: para leer bytes
-            InputStream input = pRuntime.getInputStream(); 
+            // InputStream: para leer bytes 
+            // transferTo(): pasa los bytes del proceso a la pantalla 
             
-            // transferTo(): pasa los bytes del proceso a la pantalla
+            InputStream input = pRuntime.getInputStream(); 
             input.transferTo(System.out); 
             
             pRuntime.waitFor(); 
