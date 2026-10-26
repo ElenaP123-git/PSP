@@ -49,4 +49,6 @@ public class AnalizadorTemperaturas {
         AnalizadorTemperaturas analizador = new AnalizadorTemperaturas();
         analizador.analizarYGuardar(ficheroEntrada, umbral, ficheroSalida);
     }
+    
+    /* Usé los argumentos datos.txt 25 25.txt y sale 28 porque hay 28 días donde la temperatura es mayor de 25*/
 }

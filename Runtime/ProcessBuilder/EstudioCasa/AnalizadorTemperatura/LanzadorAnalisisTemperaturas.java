@@ -41,10 +41,10 @@ public class LanzadorAnalisisTemperaturas {
                     "java", 
                     "-cp", 
                     DIRECTORIO_CLASSES, 
-                    "ProcessBuilder.EstudioCasa.AnalizadorTemperaturas", 
-                    FICHERO_TEMPERATURAS, 
-                    Integer.toString(umbralActual), 
-                    ficheroSalida 
+                    "ProcessBuilder.EstudioCasa.AnalizadorTemperaturas", //clase hija
+                    FICHERO_TEMPERATURAS, //args[0] ficheroEntrada
+                    Integer.toString(umbralActual), //args[1] umbralTexto
+                    ficheroSalida //args[2] ficheroSalida
                 };
                 
                 ProcessBuilder pb = new ProcessBuilder(comandoEjecutar);
