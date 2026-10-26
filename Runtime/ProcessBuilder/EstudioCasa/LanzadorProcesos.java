@@ -77,10 +77,10 @@ public class LanzadorProcesos {
 	public static void main(String[] args) {
 		LanzadorProcesos lanzador = new LanzadorProcesos();
 		
-		// 1. Primero siempre compilamos
+		// Primero siempre compilamos
 		lanzador.compilarClase();
 		
-		// 2. Después ejecutamos pasando el "5"
+		// Después ejecutamos pasando el "5"
 		int resultadoFinal = lanzador.ejecutarClaseHija("5");
         
         logger.info("El programa Padre ha recuperado el valor final: {}", resultadoFinal);
