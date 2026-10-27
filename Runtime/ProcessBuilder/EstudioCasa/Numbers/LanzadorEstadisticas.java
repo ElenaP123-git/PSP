@@ -44,7 +44,7 @@ public class LanzadorEstadisticas {
                     "java",
                     "-cp",
                     DIRECTORIO_CLASSES,
-                    "ProcessBuilder.EstudioCasa.Ejercicios.Hija", // Ruta completa de la clase hija
+                    "ProcessBuilder.EstudioCasa.Ejercicios.Numbers.Hija", // Ruta completa de la clase hija
                     FICHERO_DATOS,                                // args[0]
                     operacion                                     // args[1]
                 };

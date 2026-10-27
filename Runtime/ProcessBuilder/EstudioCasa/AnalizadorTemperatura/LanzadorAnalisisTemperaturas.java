@@ -13,14 +13,14 @@ public class LanzadorAnalisisTemperaturas {
     private static final Logger logger = LogManager.getLogger(LanzadorAnalisisTemperaturas.class);
     
     private final static String DIRECTORIO_CLASSES = "target\\classes";
-    private final static String RUTA_FUENTE = "src\\main\\java\\ProcessBuilder\\EstudioCasa\\AnalizadorTemperaturas.java";
+    private final static String RUTA_FUENTE = "src\\main\\java\\ProcessBuilder\\EstudioCasa\\AnalizadorTemperatura\\AnalizadorTemperaturas.java";
     private final static String FICHERO_TEMPERATURAS = "datos.txt"; 
 
     public void compila() {
         try {
             String[] comandoCompilar = { "javac", "-d", DIRECTORIO_CLASSES, RUTA_FUENTE };
             ProcessBuilder pb = new ProcessBuilder(comandoCompilar);
-            pb.inheritIO();
+            pb.inheritIO(); //muestra errores por consola
             Process proceso = pb.start();
             proceso.waitFor();
         } catch (IOException | InterruptedException e) {
